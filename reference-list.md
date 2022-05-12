@@ -9,3 +9,9 @@ Pallavicini, F., Ferrari, A. and Mantovani, F. (2018). Video Games for Well-Bein
 Granic, I., Lobel, A. and Rutger C. M. E. Engels (2014). The Benefits of Playing Video games. _American Psychologist_, \[online] 69(1), pp.66–78. Available at: [https://www.apa.org/pubs/journals/releases/amp-a0034857.pdf](https://www.apa.org/pubs/journals/releases/amp-a0034857.pdf) \[Accessed 18 Mar. 2022].
 
 Nanyang Technological University (2014). _Puzzle Games Can Improve Mental flexibility, Study Shows_. \[online] ScienceDaily. Available at: [https://www.sciencedaily.com/releases/2014/06/140624092528.htm](https://www.sciencedaily.com/releases/2014/06/140624092528.htm) \[Accessed 5 Apr. 2022].
+
+PEGI (2017). _PEGI age ratings | Pegi Public Site_. \[online] Pegi.info. Available at: https://pegi.info/page/pegi-age-ratings.
+
+Esrb.org. (2014). _ESRB Ratings_. \[online] Available at: https://www.esrb.org.
+
+Limelight Networks (2019). _The State of Online Gaming – 2019_. \[online] Limelight.com. Available at: https://www.limelight.com/resources/white-paper/state-of-online-gaming-2019/.
