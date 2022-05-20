@@ -2,12 +2,12 @@
 description: Computer Science H446-03
 ---
 
-# Some Generic Project
+# 2.5D platformer
 
 |                  |                |
 | ---------------- | -------------- |
 | Candidate Name   | Cameron Hay    |
-| Candidate Number | numberHere     |
+| Candidate Number | i forgor 💀    |
 | Centre Name      | Marling School |
 | Centre Number    | 57037          |
 
