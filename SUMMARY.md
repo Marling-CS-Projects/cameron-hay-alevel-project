@@ -1,6 +1,6 @@
 # Table of contents
 
-* [2.5D platformer](README.md)
+* [2D Platformer with 3D elements](README.md)
 
 ## 1 Analysis <a href="#analysis" id="analysis"></a>
 
