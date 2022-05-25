@@ -1,6 +1,7 @@
 # Table of contents
 
 * [2D Platformer with 3D elements](README.md)
+* [Reference list](reference-list.md)
 
 ## 1 Analysis <a href="#analysis" id="analysis"></a>
 
@@ -28,7 +29,3 @@
 * [4.1 Evaluation of Success Criteria](4-evaluation/4.1-evaluation-of-success-criteria.md)
 * [4.3 Maintenance and Future Development](4-evaluation/4.3-maintenance-and-future-development.md)
 * [4.2 Evaluation of Usability Features](4-evaluation/4.2-evaluation-of-usability-features.md)
-
-***
-
-* [Reference list](reference-list.md)
