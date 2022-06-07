@@ -17,3 +17,9 @@ Esrb.org. (2014). _ESRB Ratings_. \[online] Available at: [https://www.esrb.org]
 Limelight Networks (2019). _The State of Online Gaming – 2019_. \[online] Limelight.com. Available at: [https://www.limelight.com/resources/white-paper/state-of-online-gaming-2019/](https://www.limelight.com/resources/white-paper/state-of-online-gaming-2019/).
 
 StatCounter (n.d.). _Browser Market Share Worldwide_. \[online] StatCounter Global Stats. Available at: [https://gs.statcounter.com/browser-market-share](https://gs.statcounter.com/browser-market-share).
+
+code.visualstudio.com. (2022). _Requirements for Visual Studio Code_. \[online] Available at: [https://code.visualstudio.com/docs/supporting/requirements](https://code.visualstudio.com/docs/supporting/requirements).
+
+Small Business - Chron.com. (n.d.). _Google Chrome System Requirements_. \[online] Available at: [https://smallbusiness.chron.com/mozilla-firefox-system-requirements-59076.html](https://smallbusiness.chron.com/mozilla-firefox-system-requirements-59076.html)\[Accessed 4 Jun. 2022].
+
+Apple Newsroom (United Kingdom). (2007). _Apple Introduces Safari for Windows_. \[online] Available at: Apple Newsroom (United Kingdom), 2007\[Accessed 6 Jun. 2022].
