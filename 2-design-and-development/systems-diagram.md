@@ -2,13 +2,19 @@
 
 ## Systems Diagram
 
-![](<../.gitbook/assets/System Diagram.jpg>)
+![](<../.gitbook/assets/image (2).png>)
 
 This diagram shows the different parts of the game that I will focus on creating. I have split each section into smaller sub-sections. Throughout the development stage, I will pick one or two of these sections to focus on at a time to gradually build up and piece together the game. I have broken the project down this way as it roughly corresponds to the success criteria.
 
 ## Usability Features
 
 Usability is an important aspect to my game as I want it to be accessible to all. There are 5 key points of usability to create the best user experience that I will be focusing on when developing my project. These are:
+
+* Player Movement
+* Collisions
+* Platforms
+* Menus & Pause Screens
+* Graphics
 
 ### Effective
 
@@ -17,7 +23,7 @@ Users can achieve the goal with completeness and accuracy. To do this, I will ma
 #### Aims
 
 * Create a clear goal to reach to determine the end of a level
-* Create a clear goal for any multiplayer modes
+* Create a collectable items that unlock the said end of the level
 
 ### Efficiency
 
@@ -26,16 +32,15 @@ The speed and accuracy to which a user can complete the goal. To do this, I will
 #### Aims
 
 * Create a menu system that is quick and easy to navigate through
-* Create a controls system that isn't too complicated but allows the player to do multiple actions
+* Create a controls system that isn't too complicated but allows the player to do multiple actions at the same time.
 
 ### Engaging
 
-The solution is engaging for the user to use. To do this, I will create 5 levels and an online multiplayer mode to keep the players engaged and allow them to have fun while playing the game. Using vector style art will also make the game nicer to look at than blocks, so will draw more people in, keeping them engaged.
+The solution is engaging for the user to use. To do this, I will create 3-5 levels and make them in different styles to keep the experience fresh every level, you should have to complete all the objectives in a level to pass through it.
 
 #### Aims
 
 * Create a series of levels to work through
-* Create a multiplayer mode to play
 * Incorporate a style of game art the suits the game
 
 ### Error Tolerant
@@ -54,7 +59,7 @@ The solution should be easy to use and not be over complicated. To do this, I wi
 #### Aims
 
 * Create a list of controls for the game
-* Create an in-level guide that helps players learn how to play the game
+* Create an in-level guide that helps players learn how to play the game (a tutorial)
 
 ## Pseudocode for the Game
 
