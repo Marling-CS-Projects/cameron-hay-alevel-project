@@ -1,36 +1,44 @@
-# 2.2.1 Cycle 1
+# 2.2.1 Cycle 0
 
 ## Design
 
 ### Objectives
 
-In this phase I made a scene and tested how collision works in THREE.js - it will draw two cubes in the scene and have them both be controllable using W/A/S/D and UP/LEFT/DOWN/RIGHT, when they collide they should display that they are colliding.
+In this phase I want the webpage to display anything other than a blank white page, I want to be able to render a scene and a camera in THREE.JS
 
 * [x] The Scene displays
-* [x] The Cubes display
-* [x] The Cubes are controllable
-* [x] The Cubes show collision
+* [x] The Scene displays a different colour
+* [x] The Camera works
 
 ### Usability Features
 
-It works
+A graphical display is required for the game to be played, in my "first" cycle I have made an empty 3D space with a coloured background.
 
 ### Key Variables
 
-| Variable Name         | Use                                                                                                                         |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| cube                  | Is the mesh used for both cubes                                                                                             |
-| material1 & material2 | Different Materials for use in both cubes                                                                                   |
-| cube1 & cube2         | Is the object that combines the mesh and material                                                                           |
-| cube1BB & cube2BB     | <p>The bounding boxes for either cube, it updates its location to cube  every frame:</p><p>cube2BB.setfromObject(cube2)</p> |
-| function (e)          | detects if either WASD / UP RIGHT DOWN LEFT and moves the cubes accordingly                                                 |
+| Variable Name | Use                                                                                                                                      |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| scene         | creates an empty 3D world that i can add things to.                                                                                      |
+| orthCamera    | creates an orthographic camera that is added to the scene that we can view the scene through and is what ends up displaying the webpage. |
+| renderer      | a built in webGLRenderer in the THREE.js library that renders the scene, ideally has the height and width of the camera.                 |
+| ambient       | a light that makes the default lowest light level a value.                                                                               |
 
 ### Pseudocode
 
 ```
-procedure do_something
-    
-end procedure
+create scene
+create camera
+    camera values here
+
+create renderer
+create canvas with render settings
+when the screen is stretched, update the screen resolution
+create light
+add light to scene
+
+animate function 
+    render( scene & camera )
+call animate
 ```
 
 ## Development
@@ -39,7 +47,7 @@ end procedure
 
 ### Challenges
 
-Getting javascript nodes & imports to work
+Getting javascript nodes & imports to work, got it in the end
 
 ## Testing
 
@@ -47,158 +55,49 @@ Evidence for testing
 
 ### Tests
 
-| Test | Instructions             | What I expect                                                 | What actually happens | Pass/Fail |
-| ---- | ------------------------ | ------------------------------------------------------------- | --------------------- | --------- |
-| 1    | Run code                 | Two Cubes of different colour appear on a plane in the scene. | As expected           | Pass      |
-| 2    | Press WASD               | Cube 1 moves                                                  | As expected           | Pass      |
-| 3    | Press UP RIGHT DOWN LEFT | Cube 2 moves                                                  |                       |           |
-| 4    | Make Cubes collide       | Cubes Flash using a random colour.                            |                       |           |
+| Test | Instructions | What I expect                                 | What actually happens | Pass/Fail |
+| ---- | ------------ | --------------------------------------------- | --------------------- | --------- |
+| 1    | Run code     | The background of the scene displays a colour | as expected           | pass      |
 
 ### Evidence
 
 [link to code](https://github.com/Ca-Hay/CollisionDetection3D)
 
 ```
-import * as THREE from "./node_modules/three/build/three.module.js"
-//SCENE
+import * as THREE from './nodes/three.module.js'
+
+//create scene
 let scene = new THREE.Scene();
-//CAMERA
- //create a camera to view the objects through 
- let camera = new THREE.PerspectiveCamera(
-    75, //FOV
-    window.innerWidth/ window.innerHeight, //Aspect Ratio
-    0.1, //near and far plane
-    1000
-);
-camera.position.set(0,5,5);
-camera.lookAt(0,0,0)
-//RENDERER
+const textureLoader = new THREE.TextureLoader();
+
+//create camera to view scene
+//Left, Right, Top, Bottom, Near, Far
+const scale = 8;
+let orthCamera = new THREE.OrthographicCamera(
+-1.72 * scale, 1.72 * scale, 1 * scale, -1 * scale,
+-1000,
+1000);
+
+//renderer settings
 let renderer = new THREE.WebGLRenderer({antialias: true});
-//set the background colour of the scene
-renderer.setClearColor("#00FFFF");
-//size of the renderer
+renderer.setClearColor('#ADD8E6')
 renderer.setSize(window.innerWidth, window.innerHeight);
-
-//create a canvas element with these renderer settings
+//creates a cavanvas object with the renderer settings
 document.body.appendChild(renderer.domElement);
-
-//when the screen is streched, update
+//when the window resolution changes, change the render settings to the new size
 window.addEventListener('resize', () => {
     renderer.setSize(window.innerWidth, window.innerHeight);
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
+    orthCamera.aspect = aspectRatio;
+    orthCamera.updateProjectionMatrix();
 })
-//LIGHTS
+
+//ambient light - lowest possible light level
 //colour, intensity, distance, decay.
-let light = new THREE.PointLight(0xFFFFFF, 1.5, 500)
-light.position.set(0,10,0);
-scene.add(light);
-
-//----------------------------------------------------------------------------
-
-//Cube  1
-let Cube = new THREE.BoxGeometry(1,1,1);
-let Material1 = new THREE.MeshPhongMaterial( {color: "#92ABEA" });
-let Material2 = new THREE.MeshPhongMaterial( {color: "#E86262" });
-let cube1 = new THREE.Mesh(Cube, Material1)
-cube1.position.set(3,0,0);
-cube1.castShadow = true;
-
-//Cube 1 Bounding box
-let cube1BB = new THREE.Box3(new THREE.Vector3, new THREE.Vector3());
-cube1BB.setFromObject(cube1)
-//Cube 2 - Player Cube
-let cube2 = new THREE.Mesh(Cube, Material2)
-cube2.position.set(-3,0,0);
-cube2.castShadow = true
-//Cube 2 Bounding box
-let cube2BB = new THREE.Box3(new THREE.Vector3, new THREE.Vector3());
-cube2BB.setFromObject(cube2)
-//Floor
-let floor = new THREE.PlaneGeometry(150, 150);
-let greenFloor = new THREE.MeshStandardMaterial( { color:'grey' } )
-let plane1 = new THREE.Mesh(floor, greenFloor);
-plane1.position.set(0,-0.5,0);
-plane1.rotateX(-Math.PI / 2)
-//add all objects to the scene
-scene.add(cube1, cube2, plane1)
-//----------------------------------------------------------------------------
-//KEY CONTROLs
-
-document.onkeydown = function(e) {
-    if (e.keyCode === 37) {
-        //if left arrowkey pressed
-        cube2.position.x -= 0.1;
-        //left
-    } else 
-    if (e.keyCode === 39) {
-        //if right arrowkey pressed
-        cube2.position.x += 0.1;
-        //right
-    } else
-    if (e.keyCode === 38) {
-        //if up arrowkey pressed
-        cube2.position.z -= 0.1;
-        //forward
-    } else 
-    if (e.keyCode === 40) {
-        //if down arrowkey pressed
-        cube2.position.z += 0.1;
-        //backwards
-    } else     
-    if (e.keyCode === 65) {
-        //if A pressed
-        cube1.position.x -= 0.1;
-        //left
-    } else 
-    if (e.keyCode === 68) {
-        //if D arrowkey pressed
-        cube1.position.x += 0.1;
-        //right
-    } else
-    if (e.keyCode === 87) {
-        //if W pressed
-        cube1.position.z -= 0.1;
-        //forward
-    } else 
-    if (e.keyCode === 83) {
-        //if S pressed
-        cube1.position.z += 0.1;
-        //backwards
-    }
-};
-
-//Orbit controls exist NO THEY DONT LOL
-//let controls = new OrbitControls ( camera, domElement)
-
-//----------------------------------------------------------------------------
-//TEXT
-//----------------------------------------------------------------------------
-function animation1 (){
-    cube1.material.transparent = true;
-    cube1.material.opacity = 0.5;
-    cube1.material.color = new THREE.Color(Math.random() * 0xffffff)
-
-    cube2.material.transparent = true;
-    cube2.material.opacity = 0.5;
-    cube2.material.color = new THREE.Color(Math.random() * 0xffffff)
-}
-
-
-function checkCollisions(){
-    if (cube2BB.intersectsBox(cube1BB)) {
-        console.log("i am colliding")
-        animation1();
-    } else {
-        cube1.material.opacity = 1.0;
-    }
-}
+let ambient = new THREE.AmbientLight('#ffffff', 0.5);
+scene.add(ambient);
 
 function animate() {
-    cube2BB.copy( cube2.geometry.boundingBox).applyMatrix4(cube2.matrixWorld);
-    cube1BB.copy( cube1.geometry.boundingBox).applyMatrix4(cube1.matrixWorld);
-    checkCollisions()
-    renderer.render(scene, camera);
+    renderer.render(scene, orthCamera);
     requestAnimationFrame(animate);
 }
 animate();
