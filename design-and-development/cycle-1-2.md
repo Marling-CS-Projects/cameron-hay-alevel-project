@@ -1,4 +1,4 @@
-# 2.2.1 Cycle 2
+# 2.2.2 Cycle 2
 
 ## Design
 
@@ -73,6 +73,8 @@ Getting the bounding boxes to behave like they should instead of breaking the en
 While coding a few bugs arose, most notably the .copy function was not working as intended so I had to use .setFromObject instead this functioned almost identically and also worked.
 
 There was also an issue involving the cube falling through the first floor and landing on the second, I expanded the list and it only landed on the third now, I figured out that it was checking against every object and saw it wasn't colliding with them, so it turned gravity on again, but when the code got to the end of the list of objects it stopped because it was at the end of the loop.
+
+There was also an issue where the player would stick to the bottom of the platforms, this was because it was still technically "colliding" with them so gravity was still turned off, i fixed this by making the cube collide with the top of the cube and not the bottom for disabling gravity.&#x20;
 
 ### Tests
 
