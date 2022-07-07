@@ -1,18 +1,16 @@
-# 2.2.4 Cycle 4 \*
+# 2.2.1 Template
 
 ## Design
 
 ### Objectives
 
-get the game character to jump.
+
 
 * [x] The Scene displays
-* [x] the level has a "puzzle" tutorial that uses jumps
-* [x] the player character can jump
 
 ### Usability Features
 
-the player can jump
+It works
 
 ### Key Variables
 
