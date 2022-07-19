@@ -55,19 +55,41 @@ if cameracounter is 3
 
 ### Outcome
 
+The scene changes what perspective it is being viewed from when you press either Q or E, this also updates what "side" it is being viewed from, either 1, 2, 3 or 4.
+
 ### Challenges
 
 Getting JavaScript nodes & imports to work
+
+Getting the Array to display the correct side&#x20;
 
 ## Testing
 
 Evidence for testing
 
+![](<../.gitbook/assets/image (6).png>)
+
+![](<../.gitbook/assets/image (2).png>)
+
+![](<../.gitbook/assets/image (3).png>)
+
+![](<../.gitbook/assets/image (5).png>)
+
+![](<../.gitbook/assets/image (7).png>)
+
+![](<../.gitbook/assets/image (10).png>)
+
+![](<../.gitbook/assets/image (9).png>)
+
+![](<../.gitbook/assets/image (8).png>)
+
 ### Tests
 
-| Test | Instructions | What I expect | What actually happens | Pass/Fail |
-| ---- | ------------ | ------------- | --------------------- | --------- |
-|      |              |               | As expected           | Pass      |
+| Test                    | Instructions | What I expect        | What actually happens | Pass/Fail |
+| ----------------------- | ------------ | -------------------- | --------------------- | --------- |
+| rotate by one           | press E      | console to display 2 | As expected           | Pass      |
+| rotate by 2             | press E x 2  | console to display 3 | As expected           | Pass      |
+| rotate counterclockwise | press Q      | console to display 4 | As expected           | ass       |
 
 ### Evidence
 
