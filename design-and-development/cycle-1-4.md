@@ -8,11 +8,11 @@ get the game character to jump.
 
 * [x] The Scene displays
 * [x] the level has a "puzzle" tutorial that uses jumps
-* [x] the player character can jump
+* [ ] the player character can jump with a smooth up and down motion
 
 ### Usability Features
 
-the player can jump
+on a keypress, if you are grounded, make they character move up and down independently from the arrow keys
 
 ### Key Variables
 
