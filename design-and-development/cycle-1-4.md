@@ -8,7 +8,7 @@ get the game character to jump.
 
 * [x] The Scene displays
 * [x] the level has a "puzzle" tutorial that uses jumps
-* [ ] the player character can jump with a smooth up and down motion
+* [x] the player character can jump with a smooth up and down motion
 
 ### Usability Features
 
@@ -16,9 +16,11 @@ on a keypress, if you are grounded, make they character move up and down indepen
 
 ### Key Variables
 
-| Variable Name | Use |
-| ------------- | --- |
-|               |     |
+| Variable Name | Use                                                              |
+| ------------- | ---------------------------------------------------------------- |
+| onGround      | to check if the player is on the floor                           |
+| jumpCount     | the amount of "charges" the jump has before it begins to go down |
+| isJumping     | checks if the player is currently jumping                        |
 
 ### Pseudocode
 
