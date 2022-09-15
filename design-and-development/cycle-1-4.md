@@ -16,18 +16,39 @@ on a keypress, if you are grounded, make they character move up and down indepen
 
 ### Key Variables
 
-| Variable Name | Use                                                              |
-| ------------- | ---------------------------------------------------------------- |
-| onGround      | to check if the player is on the floor                           |
-| jumpCount     | the amount of "charges" the jump has before it begins to go down |
-| isJumping     | checks if the player is currently jumping                        |
+| Variable Name | Use                                                                                   |
+| ------------- | ------------------------------------------------------------------------------------- |
+| onGround      | to check if the player is on the floor                                                |
+| jumpCount     | the amount of "charges" the jump has before it begins to go down                      |
+| isJumping     | checks if the player is currently jumping                                             |
+| gravity       | activates grav                                                                        |
+| grav          | if the player isn't on the ground and isn't jumping it makes the character moves down |
+| yump          | all of the jump logic                                                                 |
 
 ### Pseudocode
 
 ```
-procedure do_something
+when on floor
+    isjumping = false;
+    grounded = true;
+    gravity = false;
     
-end procedure
+jump
+    if on ground and pressing space
+        isjumping = true
+    if jump "charges" are less than 15 && space is being pressed && is jumping
+        move the player up
+        +1 to jump charges
+    else if jumpcount is more than 15 or space is no longer being pressed
+        isjumping = false
+    
+grav
+    if onground && isjumping = false
+        move position down
+        
+animate
+    jump
+    grav
 ```
 
 ## Development
@@ -36,7 +57,7 @@ end procedure
 
 ### Challenges
 
-Getting JavaScript nodes & imports to work
+I went through many iterations and it had to be the longest part of the project so far, trying to figure out a way of smoothly getting a jump up and down without any plugins was difficult but in the end I was able to figure it out.
 
 ## Testing
 
@@ -53,4 +74,21 @@ Evidence for testing
 [link to code](https://github.com/Ca-Hay/CollisionDetection3D)
 
 ```
+function yump(){
+  if(onGround === true && spaceDown === true){
+    isJumping = true;
+  }
+  if(jumpCount<15 && isJumping === true && spaceDown === true){
+    player1.mesh.position.y += 0.25
+    jumpCount +=1
+  } else if(jumpCount >= 15 || spaceDown === false){
+    isJumping = false;
+  }
+}
+
+function grav(){
+  if(onGround === false && isJumping === false){
+    player1.mesh.position.y -= 0.25
+  }
+}
 ```
