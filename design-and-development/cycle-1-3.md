@@ -1,4 +1,4 @@
-# 2.2.3 Cycle 3
+# 2.3 Cycle 3
 
 ## Design
 
@@ -81,7 +81,7 @@ Evidence for testing
 
 ![](<../.gitbook/assets/image (9).png>)
 
-![](<../.gitbook/assets/image (8) (1).png>)
+![](<../.gitbook/assets/image (8).png>)
 
 ### Tests
 
