@@ -6,13 +6,13 @@
 
 Create a system where you can change the side the game is being viewed from with Q & E the game knows which side the scene is being viewed from and change the movement to accompany it.
 
-* [ ] Can change what side the 3d scene is being viewed from.
-* [ ] Constantly know what side the game is being viewed from.
-* [ ] Change the movement based on what side you are viewing the scene from.
+* [x] Can change what side the 3d scene is being viewed from.
+* [x] Constantly know what side the game is being viewed from.
+* [x] Change the movement based on what side you are viewing the scene from.
 
 ### Usability Features
 
-it does the thing
+Q and E move the camera around the scene left and right respectively this allows the level to change uniquely and have the player learn this new mechanic.
 
 ### Key Variables
 
@@ -69,7 +69,7 @@ Evidence for testing
 
 ![](<../.gitbook/assets/image (6).png>)
 
-![](<../.gitbook/assets/image (2).png>)
+![](<../.gitbook/assets/image (2) (1).png>)
 
 ![](<../.gitbook/assets/image (3).png>)
 
@@ -81,7 +81,7 @@ Evidence for testing
 
 ![](<../.gitbook/assets/image (9).png>)
 
-![](<../.gitbook/assets/image (8).png>)
+![](<../.gitbook/assets/image (8) (1).png>)
 
 ### Tests
 

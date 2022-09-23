@@ -25,14 +25,20 @@ the floor renders in the camera view
 ### Pseudocode
 
 ```
-procedure do_something
-    
-end procedure
+class floor
+    floor (x pos, y pos, z pos, length, width, height)
+        create geometry
+        create material
+        combine them into a mesh at (x, y, z)      
 ```
 
 ## Development
 
+this was my first time using classes in anything, it was interesting learning how 'this.' and other class specific things worked with the rest of the program as i continued to go throughout the project - moving forward it felt like the only way to make a unique and repeatable object every time.
+
 ### Outcome
+
+The floor displayed in the middle of the screen, but there was no player to play the scene, this would be my next step.
 
 ### Challenges
 

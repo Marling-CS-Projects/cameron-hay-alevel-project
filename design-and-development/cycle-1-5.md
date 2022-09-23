@@ -1,7 +1,5 @@
 # 2.2.5 Cycle 5
 
-## Design
-
 ### Objectives
 
 allow the player to land on different platforms regardless of perspective issues
@@ -45,6 +43,8 @@ when camera is facing so X is on screen
 
 Getting JavaScript nodes & imports to work
 
+figuring out how to scale the bounding boxes
+
 ## Testing
 
 during development i was constantly moving around my character testing different situations and bug fixing code when things didn't work
@@ -57,7 +57,40 @@ during development i was constantly moving around my character testing different
 
 ### Evidence
 
+{% embed url="https://youtu.be/hmavjzuWbNI" %}
+
 [link to code](https://github.com/Ca-Hay/CollisionDetection3D)
 
 ```
+window.addEventListener('keyup', (e) => {
+    switch (e.keyCode){
+      case 87: // w
+        wDown = false;
+        break;
+      case 65: // a
+        aDown = false;
+        break;
+      case 83: // s
+        sDown = false;
+        break;
+      case 68: // d
+        dDown = false;
+        break;
+      case 32: // space
+        spaceDown = false;
+        break;
+      case 81: // q
+        qDown = false;    
+        orthCamera.rotateY(radToDeg(-90));
+        cameraCounter -= 1;
+        console.log("q")
+        break;
+      case 69: // e
+        eDown = false;
+        orthCamera.rotateY(radToDeg(90));
+        cameraCounter += 1;
+        console.log("e")
+        break;
+    }
+});
 ```

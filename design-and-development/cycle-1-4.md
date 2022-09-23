@@ -1,4 +1,4 @@
-# 2.2.4 Cycle 4 \*
+# 2.2.4 Cycle 4
 
 ## Design
 
@@ -12,7 +12,7 @@ get the game character to jump.
 
 ### Usability Features
 
-on a keypress, if you are grounded, make they character move up and down independently from the arrow keys
+on a keypress, if you are grounded, make the character move up and down independently from the arrow keys
 
 ### Key Variables
 
@@ -55,21 +55,28 @@ animate
 
 ### Outcome
 
+on pressing space the character moves up until all charges are expended or space stops being held.
+
 ### Challenges
 
 I went through many iterations and it had to be the longest part of the project so far, trying to figure out a way of smoothly getting a jump up and down without any plugins was difficult but in the end I was able to figure it out.
 
 ## Testing
 
-Evidence for testing
+![](<../.gitbook/assets/image (8).png>)
+
+this is a picture of the moyai mid jump
 
 ### Tests
 
-| Test | Instructions | What I expect | What actually happens | Pass/Fail |
-| ---- | ------------ | ------------- | --------------------- | --------- |
-|      |              |               | As expected           | Pass      |
+| Test             | Instructions                        | What I expect           | What actually happens | Pass/Fail |
+| ---------------- | ----------------------------------- | ----------------------- | --------------------- | --------- |
+| do a short jump  | hold down spacebar for 0.25 seconds | player1 to jump         | As expected           | Pass      |
+| do a longer jump | hold down spacebar for 1.5 seconds  | player 1 to jump higher | as expected           | pass      |
 
 ### Evidence
+
+{% embed url="https://youtu.be/cerDqc491E4" %}
 
 [link to code](https://github.com/Ca-Hay/CollisionDetection3D)
 
