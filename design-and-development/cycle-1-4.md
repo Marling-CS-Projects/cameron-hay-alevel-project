@@ -63,7 +63,7 @@ I went through many iterations and it had to be the longest part of the project 
 
 ## Testing
 
-![](<../.gitbook/assets/image (2).png>)
+![](<../.gitbook/assets/image (1).png>)
 
 this is a picture of the moyai mid jump
 

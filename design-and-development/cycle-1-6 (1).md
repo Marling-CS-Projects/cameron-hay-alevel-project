@@ -1,4 +1,4 @@
-# 2.2.1 Template
+# 2.1 Template
 
 ## Design
 

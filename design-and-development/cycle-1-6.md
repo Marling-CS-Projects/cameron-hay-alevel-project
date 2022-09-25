@@ -4,19 +4,23 @@
 
 ### Objectives
 
+get the camera to spin around the scene instead of snapping to the location immediately, this allows the player to more understand what is happening when they press a button and enables more visual feedback.&#x20;
 
-
-* [x] The Scene displays
+* [x] make the camera rotate in a motion
+* [x] Q and E still work as the controls
+* [x] while it is spinning it cant spin the opposite direction
 
 ### Usability Features
 
-It works
+Q and E activate the spin
 
 ### Key Variables
 
-| Variable Name | Use |
-| ------------- | --- |
-|               |     |
+| Variable Name | Use                        |
+| ------------- | -------------------------- |
+| qDown         | checks to see if Q is down |
+| eDown         | checks to see if Q is down |
+| isRotating    |                            |
 
 ### Pseudocode
 
