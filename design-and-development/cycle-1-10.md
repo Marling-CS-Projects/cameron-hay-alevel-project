@@ -1,4 +1,4 @@
-# 2.9 Cycle 9\*
+# 2.1 Template
 
 ## Design
 
