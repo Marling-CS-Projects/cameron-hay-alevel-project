@@ -16,37 +16,56 @@ Q and E activate the spin
 
 ### Key Variables
 
-| Variable Name | Use                        |
-| ------------- | -------------------------- |
-| qDown         | checks to see if Q is down |
-| eDown         | checks to see if Q is down |
-| isRotating    |                            |
+| Variable Name | Use                                                                                    |
+| ------------- | -------------------------------------------------------------------------------------- |
+| qDown         | checks to see if Q is down                                                             |
+| eDown         | checks to see if Q is down                                                             |
+| canRotate     | stops the rotation from happening again if the other button is pressed                 |
+| rotCount      | a number variable that is manipulated by the function to start and stop the animation. |
+| isRotating    | increases the rotCount every frame                                                     |
 
 ### Pseudocode
 
 ```
-procedure do_something
-    
-end procedure
+cameraRot
+    if qDown == true && canRotate == true
+        isRotating = true
+        canRotate = false
+    if rotCount > 9 && isRotatingQ
+        orthCamera rotate 10 degrees
+        rotCount += 1
+    else if rotCount <= 9
+        isRotatingQ = false
+        reset rotCount to 0
+        cameraCounter -= 1
+        canRotate = true
+        
+    repeat for E too
+        
 ```
 
 ## Development
 
 ### Outcome
 
+the camera smoothly rotates around the player and stops where it is supposed to
+
 ### Challenges
 
 Getting JavaScript nodes & imports to work
 
+some bugs where it wouldn't stop spinning, or would spin too far every time
+
 ## Testing
 
-Evidence for testing
+the camera spins around the Moyai and stops when it is supposed to - i tested it with Q and E and it functioned.
 
 ### Tests
 
-| Test | Instructions | What I expect | What actually happens | Pass/Fail |
-| ---- | ------------ | ------------- | --------------------- | --------- |
-|      |              |               | As expected           | Pass      |
+| Test    | Instructions | What I expect           | What actually happens | Pass/Fail |
+| ------- | ------------ | ----------------------- | --------------------- | --------- |
+| press Q | Press Q      | camera to rotate left   | As expected           | Pass      |
+| press E | Press E      | camera to rotate right  | As expected           | Pass      |
 
 ### Evidence
 
