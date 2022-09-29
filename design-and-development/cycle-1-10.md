@@ -6,7 +6,8 @@
 
 add more functionality to the first level requiring you to get to a button before the red objective reveals itself
 
-* [x] The Scene displays
+* [x] add a secondary objective to the level
+* [x] make it so platforms can move
 
 ### Usability Features
 
