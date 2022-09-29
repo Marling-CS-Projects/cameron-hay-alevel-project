@@ -17,16 +17,16 @@
 
 * [2.0.1 Design Frame](2-design-and-development/systems-diagram.md)
 * [2.0.2 Cycle 0](2-design-and-development/cycle-1.md)
-* [2.1 Cycle 1](design-and-development/cycle-1-1.md)
-* [2.2 Cycle 2](design-and-development/cycle-1-2.md)
-* [2.3 Cycle 3](design-and-development/cycle-1-3.md)
-* [2.4 Cycle 4](design-and-development/cycle-1-4.md)
-* [2.5 Cycle 5](design-and-development/cycle-1-5.md)
-* [2.6 Cycle 6](design-and-development/cycle-1-6.md)
-* [2.7 Cycle 7](design-and-development/cycle-1-7.md)
-* [2.8 Cycle 8](design-and-development/cycle-1-8.md)
-* [2.9 Cycle 9\*](design-and-development/cycle-1-9.md)
-* [2.1 Template](design-and-development/cycle-1-10.md)
+* [2.0.3 Cycle 1](design-and-development/cycle-1-1.md)
+* [2.0.4 Cycle 2](design-and-development/cycle-1-2.md)
+* [2.0.5 Cycle 3](design-and-development/cycle-1-3.md)
+* [2.0.6 Cycle 4](design-and-development/cycle-1-4.md)
+* [2.0.7 Cycle 5](design-and-development/cycle-1-5.md)
+* [2.0.8 Cycle 6](design-and-development/cycle-1-6.md)
+* [2.0.9 Cycle 7](design-and-development/cycle-1-7.md)
+* [2.1.0 Cycle 8](design-and-development/cycle-1-8.md)
+* [2.1.1 Cycle 9](design-and-development/cycle-1-9.md)
+* [2.1 Template](<design-and-development/cycle-1-6 (1).md>)
 
 ## 3 Testing <a href="#testing" id="testing"></a>
 
