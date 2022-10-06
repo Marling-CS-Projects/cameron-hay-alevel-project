@@ -1,4 +1,4 @@
-# 2.1.4 Cycle 12
+# 2.1 Template
 
 ## Design
 

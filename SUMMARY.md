@@ -28,7 +28,8 @@
 * [2.1.1 Cycle 9](design-and-development/cycle-1-9.md)
 * [2.1.2 Cycle 10](design-and-development/cycle-1-10.md)
 * [2.1.3 Cycle 11](design-and-development/cycle-1-11.md)
-* [2.1 Template](design-and-development/cycle-1-12.md)
+* [2.1.4 Cycle 12](design-and-development/cycle-1-12.md)
+* [2.1 Template](design-and-development/cycle-1-13.md)
 
 ## 3 Testing <a href="#testing" id="testing"></a>
 
