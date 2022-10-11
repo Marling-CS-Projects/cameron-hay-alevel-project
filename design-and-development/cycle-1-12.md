@@ -59,4 +59,39 @@ Evidence for testing
 [link to code](https://github.com/Ca-Hay/CollisionDetection3D)
 
 ```
+function teleportA(){
+  if(player1.meshBB.intersectsBox(portalA1.meshBB) && teleportSickness === false){
+    player1.mesh.position.x = portalA2.x;
+    player1.mesh.position.z = portalA2.z;
+    player1.mesh.position.y = portalA2.y;
+    teleportSickness = true;
+  }
+  if(player1.meshBB.intersectsBox(portalA2.meshBB) && teleportSickness === false){
+    player1.mesh.position.x = portalA1.x;
+    player1.mesh.position.z = portalA1.z;
+    player1.mesh.position.y = portalA1.y;
+    teleportSickness = true;
+  }
+}
+
+function checkCollision(){
+  onGround = false;
+  gravity = true;
+  floorObj.forEach(instance => {
+    if (player1.meshBB.intersectsBox(instance.meshBB) && !(player1.mesh.position.y < instance.meshBB.max.y)){
+      if(cameraState[cameraCounter] == 1 || cameraState[cameraCounter] == 3){
+      player1.mesh.position.z = instance.z
+      }
+      if(cameraState[cameraCounter] == 2 || cameraState[cameraCounter] == 4){
+        player1.mesh.position.x = instance.x
+      }
+      onGround = true;
+      gravity = false;
+      teleportSickness = false;
+      if(isJumping == false){
+        jumpCount = 0;
+      }
+    }
+  })
+}
 ```
