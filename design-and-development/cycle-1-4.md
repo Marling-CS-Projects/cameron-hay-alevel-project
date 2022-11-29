@@ -1,4 +1,4 @@
-# 2.4 Cycle 4
+# 2.0.6 Cycle 4
 
 ## Design
 
@@ -63,7 +63,7 @@ I went through many iterations and it had to be the longest part of the project 
 
 ## Testing
 
-![](<../.gitbook/assets/image (1).png>)
+![](<../.gitbook/assets/image (1) (3).png>)
 
 this is a picture of the moyai mid jump
 
