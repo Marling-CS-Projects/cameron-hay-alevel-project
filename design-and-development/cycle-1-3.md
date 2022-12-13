@@ -67,7 +67,7 @@ Getting the Array to display the correct side&#x20;
 
 Evidence for testing
 
-![](<../.gitbook/assets/image (6) (1).png>)
+![](<../.gitbook/assets/image (6) (1) (3).png>)
 
 ![](<../.gitbook/assets/image (2) (1) (2).png>)
 
@@ -81,7 +81,7 @@ Evidence for testing
 
 ![](<../.gitbook/assets/image (9) (1).png>)
 
-![](<../.gitbook/assets/image (8).png>)
+![](<../.gitbook/assets/image (8) (1).png>)
 
 ### Tests
 
