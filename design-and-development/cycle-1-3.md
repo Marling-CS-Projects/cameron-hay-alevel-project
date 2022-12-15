@@ -77,7 +77,7 @@ Evidence for testing
 
 ![](<../.gitbook/assets/image (7) (2).png>)
 
-![](<../.gitbook/assets/image (10).png>)
+![](<../.gitbook/assets/image (10) (1).png>)
 
 ![](<../.gitbook/assets/image (9) (1).png>)
 
