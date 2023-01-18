@@ -185,10 +185,12 @@ class player {
       //sets the position of the boundingbox to the mesh
       this.meshBB.setFromArray(this.mesh);
 
+      //actually add the mesh to the scene
       scene.add(this.mesh);
     }
 }
 
+//create the objects to be used in the level
 const player1 = new player(0, 4, 0, 1, 1, 1);
 const floor1 = new floor(-3, -3, 0, 3, 1, 3);
 const floor2 = new floor(3, -3, 0, 3, 1, 3);
@@ -198,6 +200,7 @@ const floor3 = new floor(0, -5, 0, 3, 1, 3);
 //functions
 const floorObj = [floor1.meshBB, floor2.meshBB, floor3.meshBB];
 
+//buncha different variabled
 let gravT = false;
 let grounded = false;
 let wDown = false;
@@ -205,9 +208,10 @@ let sDown = false;
 let aDown = false;
 let dDown = false;
 let spaceDown = false;
+//sets the speed of the characters
 let speed = 0.2;
 
-
+//movement while the camera is looking along the Z axis
 function movementZpos(){
   if(aDown === true) {
       player1.mesh.position.x -= 1* speed;
@@ -216,19 +220,20 @@ function movementZpos(){
       player1.mesh.position.x += 1* speed;
   };
 }
-
+//turn gravity on if the variable is on
 function gravity(){
   if (gravT){
   player1.mesh.position.y -= 0.25;
   }
 }
-
+//if the player falls off the platform then it will respawn at the top
 function deathCheck(){
   if(player1.mesh.position.y < -20){
     player1.mesh.position.set(0, 4, 0);
   } 
 }
 
+//checks if the player is colliding with any of the platforms
 function checkCollision(){
   grounded = false;
   gravT = true;
@@ -243,6 +248,8 @@ function checkCollision(){
 
 //------------------------------------------------------------------------------
 
+//keybinds
+//on keydown the key variable is activated and on keyup it is deactivated
 window.addEventListener('keyup', (e) => {
     switch (e.keyCode){
       case 87: // w
@@ -288,6 +295,7 @@ window.addEventListener('keyup', (e) => {
 });
 
 //------------------------------------------------------------------------------
+//call the functions every frame
 function animate() {
   renderer.render(scene, orthCamera);
 

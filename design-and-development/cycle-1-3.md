@@ -95,7 +95,7 @@ Evidence for testing
 
 [link to code](https://github.com/Ca-Hay/CollisionDetection3D)
 
-```
+```javascript
 import * as THREE from './node_modules/three/build/three.module.js'
 
 //create scene
@@ -256,18 +256,21 @@ function radToDeg ( degrees ) {
   return degrees * (Math.PI / 180);
 }
 
+//activates gravity based on the variable
 function gravity(){
   if (gravT){
   player1.mesh.position.y -= 0.25;
   }
 }
 
+//checks if the player has fallen off the map
 function deathCheck(){
   if(player1.mesh.position.y < -20){
     player1.mesh.position.set(0, 4, 0);
   } 
 }
 
+//checks if the player is colliding with anything
 function checkCollision(){
   grounded = false;
   gravT = true;
@@ -283,7 +286,7 @@ function checkCollision(){
 
 //------------------------------------------------------------------------------
 
-
+//on keydown it activates the variable for the key and on keyup it deactivates it
 window.addEventListener('keyup', (e) => {
     switch (e.keyCode){
       case 87: // w
@@ -348,6 +351,7 @@ window.addEventListener('keyup', (e) => {
     }
 });
 
+//based on the cameracounter, change the way it moves
 function movementOverall(){
   if(cameraCounter == 0){
     movementZpos()

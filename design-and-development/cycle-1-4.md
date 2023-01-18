@@ -80,22 +80,26 @@ this is a picture of the moyai mid jump
 
 [link to code](https://github.com/Ca-Hay/CollisionDetection3D)
 
-```
+<pre class="language-javascript"><code class="lang-javascript">//function that controlls jumping
 function yump(){
-  if(onGround === true && spaceDown === true){
+  //checks if the player is on the ground &#x26; space is being pressed
+  if(onGround === true &#x26;&#x26; spaceDown === true){
     isJumping = true;
   }
-  if(jumpCount<15 && isJumping === true && spaceDown === true){
-    player1.mesh.position.y += 0.25
+  //controls how high the player jumps with the jumpcount variable
+  if(jumpCount&#x3C;15 &#x26;&#x26; isJumping === true &#x26;&#x26; spaceDown === true){
+<strong>    //adds a count to jumpcount every frame &#x26; changes the meshes position
+</strong>    player1.mesh.position.y += 0.25
     jumpCount +=1
+    //if jumpcount goes above 15 or space is no longer pressed then cancel the jump
   } else if(jumpCount >= 15 || spaceDown === false){
     isJumping = false;
   }
 }
 
 function grav(){
-  if(onGround === false && isJumping === false){
+  if(onGround === false &#x26;&#x26; isJumping === false){
     player1.mesh.position.y -= 0.25
   }
 }
-```
+</code></pre>
