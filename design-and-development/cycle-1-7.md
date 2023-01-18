@@ -42,7 +42,7 @@ I clicked through the different webpages and it worked
 
 [link to code](https://github.com/Ca-Hay/CollisionDetection3D)
 
-```javascript
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>

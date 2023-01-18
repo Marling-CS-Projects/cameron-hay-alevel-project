@@ -46,7 +46,7 @@ figuring out how javascript can influence html
 
 [link to code](https://github.com/Ca-Hay/CollisionDetection3D)
 
-```javascript
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>

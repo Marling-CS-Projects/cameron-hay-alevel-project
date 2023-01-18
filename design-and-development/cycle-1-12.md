@@ -58,7 +58,7 @@ Evidence for testing
 
 [link to code](https://github.com/Ca-Hay/CollisionDetection3D)
 
-```javascript
+```
 function teleportA(){
   if(player1.meshBB.intersectsBox(portalA1.meshBB) && teleportSickness === false){
     player1.mesh.position.x = portalA2.x;

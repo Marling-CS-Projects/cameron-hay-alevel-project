@@ -95,7 +95,7 @@ Evidence for testing
 
 [link to code](https://github.com/Ca-Hay/CollisionDetection3D)
 
-```javascript
+```
 import * as THREE from './node_modules/three/build/three.module.js'
 
 //create scene

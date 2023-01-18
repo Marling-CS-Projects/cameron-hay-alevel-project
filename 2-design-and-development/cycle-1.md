@@ -1,4 +1,4 @@
-# 2.0.2 Cycle 0
+# 2.2.1 Cycle 0
 
 ## Design
 
@@ -25,7 +25,7 @@ A graphical display is required for the game to be played, in my "first" cycle I
 
 ### Pseudocode
 
-```javascript
+```
 create scene
 create camera
     camera values here
@@ -63,7 +63,7 @@ Evidence for testing
 
 [link to code](https://github.com/Ca-Hay/CollisionDetection3D)
 
-```javascript
+```
 import * as THREE from './nodes/three.module.js'
 
 //create scene

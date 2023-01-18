@@ -51,7 +51,7 @@ the background didn't want to change colour, so i had to re do the code a few ti
 
 [link to code](https://github.com/Ca-Hay/CollisionDetection3D)
 
-```javascript
+```
 function lightning(){
   lightningCount += 1
   //console.log(lightningCount)

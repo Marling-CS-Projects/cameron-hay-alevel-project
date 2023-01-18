@@ -177,9 +177,12 @@ class player {
       this.mesh = new THREE.Mesh(this.geometry, this.playerTexture);
       //dumbed down the shadow casting stuff as it doesnt have to recive shadows aswell
       this.mesh.castShadow = true;
+      //sets the meshes position at the start of the scene
       this.mesh.position.set(x, y, z);
-
+      
+      //create a bounding box that interacts with other boundingboxes
       this.meshBB = new THREE.Box3(new THREE.Vector3(), new THREE.Vector3());
+      //sets the position of the boundingbox to the mesh
       this.meshBB.setFromArray(this.mesh);
 
       scene.add(this.mesh);

@@ -42,7 +42,7 @@ the level works as it should and it meets all the criteria
 
 [link to code](https://github.com/Ca-Hay/CollisionDetection3D)
 
-```javascript
+```
 const player1 = new player(0, 4, 0, 1, 1, 1);
 const floor1 = new floor(0, -2, 0, 4, 1, 4, 0x808080);
 const floor2 = new floor(16, -2 , 0, 2, 1, 2, 0x909090);
