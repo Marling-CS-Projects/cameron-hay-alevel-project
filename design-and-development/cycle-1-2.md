@@ -1,4 +1,4 @@
-# 2.2.2 Cycle 2
+# 2.0.4 Cycle 2
 
 ## Design
 
@@ -87,7 +87,7 @@ There was also an issue where the player would stick to the bottom of the platfo
 
 [link to code](https://github.com/Ca-Hay/CollisionDetection3D)
 
-```
+```javascript
 import * as THREE from './node_modules/three/build/three.module.js'
 
 //create scene
@@ -132,27 +132,39 @@ let ambient = new THREE.AmbientLight('#ffffff', 0.5);
 scene.add(ambient);
 
 //------------------------------------------------------------------------------
-
+//create a reusable 'floor' class that will stop the player from falling when they collide with it
 class floor {
+    //collates all the information a box floor would need to work
     constructor(x, y, z, w, h, l) {
+        //merges the geometry and material into one
         this.mesh = new THREE.Mesh(
+            //create the geometry, set it based on input
             new THREE.BoxGeometry(w, h, l),
+            //create the material
             new THREE.MeshLambertMaterial( {color: 0xf0f0f0 } )
         );
+        //can cast and receive shadows
         this.mesh.castShadow = true;
         this.mesh.recieveShadow = true;
+        // set position based on what is inputted
         this.mesh.position.set(x, y, z);
-
+        
+        //creates a seperate boundingbox that other boundingboxes can collid with, seperate from the mesh
         this.meshBB = new THREE.Box3(new THREE.Vector3(), new THREE.Vector3());
-        this.meshBB.setFromObject(this.mesh);
+        //sets the boundingbox to the objects position, this does not need to be updated as it does not move
+        this.meshBB.setFromObject(mesh);
 
+        //actually add the mesh to the scene
         scene.add(this.mesh);
     }
 }
-
+//create a callable player class
 class player {
+    //constructer with all the data that it needs to function
     constructor(x, y, z, w, h, l) {
+      //creates the cube geometry
       this.geometry = new THREE.BoxGeometry(w, h, l),
+      //creates the player texture, based on the files that i uploaded
       this.playerTexture = [
         new THREE.MeshStandardMaterial({ map: textureLoader.load('../img/moyaiLeft.png')}),         //Left   pz
         new THREE.MeshStandardMaterial({ map: textureLoader.load('../img/moyaiRight.png')}),        //Right  nz
@@ -161,7 +173,9 @@ class player {
         new THREE.MeshStandardMaterial({ map: textureLoader.load('../img/moyaiFront.png')}),        //Front  px
         new THREE.MeshStandardMaterial({ map: textureLoader.load('../img/moyaiBack.png')}),         //Back   nx
       ];
+      //create the mesh based on the geometry and texture i made
       this.mesh = new THREE.Mesh(this.geometry, this.playerTexture);
+      //dumbed down the shadow casting stuff as it doesnt have to recive shadows aswell
       this.mesh.castShadow = true;
       this.mesh.position.set(x, y, z);
 

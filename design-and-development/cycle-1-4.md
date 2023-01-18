@@ -80,7 +80,7 @@ this is a picture of the moyai mid jump
 
 [link to code](https://github.com/Ca-Hay/CollisionDetection3D)
 
-```
+```javascript
 function yump(){
   if(onGround === true && spaceDown === true){
     isJumping = true;

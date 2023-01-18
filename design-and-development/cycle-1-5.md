@@ -1,4 +1,4 @@
-# 2.2.5 Cycle 5
+# 2.0.7 Cycle 5
 
 ### Objectives
 
@@ -61,7 +61,7 @@ during development i was constantly moving around my character testing different
 
 [link to code](https://github.com/Ca-Hay/CollisionDetection3D)
 
-```
+```javascript
 window.addEventListener('keyup', (e) => {
     switch (e.keyCode){
       case 87: // w

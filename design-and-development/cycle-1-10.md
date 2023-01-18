@@ -47,7 +47,7 @@ I coded a whole new class for the button before realising i could just reuse the
 
 [link to code](https://github.com/Ca-Hay/CollisionDetection3D)
 
-```
+```javascript
 function buttonLogic(){
   if(player1.meshBB.intersectsBox(button1.meshBB)){
     buttonPressed = true;

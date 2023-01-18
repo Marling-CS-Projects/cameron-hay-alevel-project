@@ -1,4 +1,4 @@
-# 2.6 Cycle 6
+# 2.0.8 Cycle 6
 
 ## Design
 
@@ -73,7 +73,7 @@ the camera spins around the Moyai and stops when it is supposed to - i tested it
 
 [link to code](https://github.com/Ca-Hay/CollisionDetection3D)
 
-```
+```javascript
 import * as THREE from './node_modules/three/build/three.module.js'
 
 //create scene

@@ -1,4 +1,4 @@
-# 2.2.1 Cycle 1
+# 2.0.3 Cycle 1
 
 ## Design
 
@@ -58,7 +58,7 @@ Evidence for testing
 
 [link to code](https://github.com/Ca-Hay/CollisionDetection3D)
 
-```
+```javascript
 import * as THREE from './nodes/three.module.js'
 
 //create scene
@@ -92,28 +92,39 @@ let ambient = new THREE.AmbientLight('#ffffff', 0.5);
 scene.add(ambient);
 
 //------------------------------------------------------------------------------
-
+//create a reusable 'floor' class that will stop the player from falling when they collide with it
 class floor {
+    //collates all the information a box floor would need to work
     constructor(x, y, z, w, h, l) {
+        //merges the geometry and material into one
         this.mesh = new THREE.Mesh(
+            //create the geometry, set it based on input
             new THREE.BoxGeometry(w, h, l),
+            //create the material
             new THREE.MeshLambertMaterial( {color: 0xf0f0f0 } )
         );
+        //can cast and receive shadows
         this.mesh.castShadow = true;
         this.mesh.recieveShadow = true;
+        // set position based on what is inputted
         this.mesh.position.set(x, y, z);
-
+        
+        //creates a seperate boundingbox that other boundingboxes can collid with, seperate from the mesh
         this.meshBB = new THREE.Box3(new THREE.Vector3(), new THREE.Vector3());
+        //sets the boundingbox to the objects position, this does not need to be updated as it does not move
         this.meshBB.setFromObject(mesh);
 
+        //actually add the mesh to the scene
         scene.add(this.mesh);
     }
 }
 
+//create two floor platforms at those coordinates
 const floor1 = new floor(0, 1, 0, 8, 1, 8);
 const floor2 = new floor(0, -2, 0, 8, 1, 8);
 //------------------------------------------------------------------------------
 
+//starts the game
 function animate() {
     renderer.render(scene, orthCamera);
     requestAnimationFrame(animate);
