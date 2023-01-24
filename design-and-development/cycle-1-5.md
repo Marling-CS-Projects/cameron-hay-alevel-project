@@ -1,4 +1,4 @@
-# 2.2.5 Cycle 5
+# 2.0.7 Cycle 5
 
 ### Objectives
 
@@ -61,7 +61,8 @@ during development i was constantly moving around my character testing different
 
 [link to code](https://github.com/Ca-Hay/CollisionDetection3D)
 
-```
+```javascript
+//camera roatation when the key is pressed
 window.addEventListener('keyup', (e) => {
     switch (e.keyCode){
       case 87: // w
@@ -80,12 +81,14 @@ window.addEventListener('keyup', (e) => {
         spaceDown = false;
         break;
       case 81: // q
+      //when q is released
         qDown = false;    
         orthCamera.rotateY(radToDeg(-90));
         cameraCounter -= 1;
         console.log("q")
         break;
       case 69: // e
+      //when e is released
         eDown = false;
         orthCamera.rotateY(radToDeg(90));
         cameraCounter += 1;
